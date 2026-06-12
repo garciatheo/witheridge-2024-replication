@@ -42,19 +42,6 @@ welfare from the `piH` and `ygap` IRFs, and produce the welfare-vs-`phi_pi` plot
 
 ---
 
-## Requirements
-
-- **MATLAB** — _tested on version: TODO (fill in)_
-- **Dynare** — _tested on version: TODO (fill in, e.g. 5.x / 6.x)_
-
-Make sure Dynare is on the MATLAB path before running, e.g.:
-
-```matlab
-addpath('C:\dynare\<version>\matlab')   % adjust to your install
-```
-
----
-
 ## How to run
 
 Run everything **from the repository root**, so the scripts can find their
@@ -94,25 +81,6 @@ These folders are generated artifacts and are not meant to be committed.
 
 ---
 
-## Notes
-
-- **Shock scale (`stderr`).** The model is linear, so the standard deviation of a
-  shock is a pure vertical-scale factor: it changes the axis only, never the sign,
-  shape, or timing of any response. The `stderr` values in the IRF files are chosen
-  only to line up with the scale of the paper's figures and carry no economic
-  content. Expect the *shapes* of the IRFs to match the paper while the absolute
-  *scale* may differ — as also noted in the accompanying report.
-
-- **Welfare comparability.** In the welfare scans, the structural shock size is
-  held fixed across the whole `phi_pi` grid; that fixed size (not impact
-  normalization) is what makes the welfare values comparable across runs.
-
-- **Re-running the scans.** The scripts substitute `phi_pi` in the base model via a
-  regular expression that expects a plain assignment line of the form
-  `phi_pi = <number>;` (no trailing comment on that line). Keep that format if you
-  edit the base `.mod` files.
-
----
 
 ## Original paper
 
@@ -122,10 +90,3 @@ Please obtain it from the author's official source.
 > Witheridge, W. (2024). *Monetary Policy and Fiscal-led Inflation in Emerging
 > Markets.* Job Market Paper.
 
----
-
-## License
-
-_TODO:_ choose a license. A common choice for replication code is the
-[MIT License](https://opensource.org/license/mit) for the code in this repository
-(this does not cover the original paper, which belongs to its author).
